@@ -53,6 +53,14 @@ docker build -f Dockerfile.centos --tag mycentosbox/base .
 
 ## Run container and attach local volume ($PWD)
 
+MacOS
+
 ```shell
 docker run -it --rm -v $(PWD):/projects mycentosbox/base
+```
+
+Windows
+
+```shell
+docker run -it --rm -v %cd%:/projects mycentosbox/base
 ```
