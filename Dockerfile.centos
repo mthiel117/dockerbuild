@@ -22,6 +22,19 @@ RUN pip3 install --user  -r requirements-dev.txt
 RUN ansible-galaxy collection install netbox.netbox
 RUN pip3 install pynetbox
 
+# ZSH
+RUN dnf install util-linux-user -y
+RUN dnf install zsh -y
+RUN wget --quiet https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true \
+    && echo 'plugins=(ansible common-aliases safe-paste git jsontools history git-extras)' >> $HOME/.zshrc \
+    && echo 'eval `ssh-agent -s`' >> $HOME/.zshrc \
+    && echo 'export TERM=xterm' >>  $HOME/.zshrc
+
 # Create the /project directory and add it as a mountpoint
 WORKDIR /projects
 VOLUME ["/projects"]
+
+# Use ZSH as default shell with default oh-my-zsh theme
+ENV PATH=$PATH:/root/.local/bin
+CMD [ "zsh" ]
+
