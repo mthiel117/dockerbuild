@@ -1,0 +1,10 @@
+Build Docker Image
+================================
+
+docker build -f Dockerfile.centos --tag mycentosbox:1.0 .
+
+
+Run Docker Image as a Container
+================================
+
+docker run -it --rm -v $(PWD):/projects mycentosbox:1.0
