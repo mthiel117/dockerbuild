@@ -70,7 +70,7 @@ ENV PATH=$PATH:/root/.local/bin
 CMD [ "zsh" ]
 ```
 
-## Build Docker Image and give it a tagname
+## Build Docker Image
 
 ```shell
 docker build -f Dockerfile.centos --tag mycentosbox/base .
