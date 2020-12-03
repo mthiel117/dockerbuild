@@ -1,7 +1,32 @@
 # Build Image
 
-## Make Dockerfile.centos
-include contents from
+## Summary
+
+Create a custom Docker container built on Centos that has Python and Ansible installed with modules and collections pre-installed to support Arista AVD and Netbox.
+
+## Versions
+
+- CentOS Linux release 8.2.2004 (Core)
+- Python 3.6.8
+- Ansible 2.9.6
+
+## Ansible Collections & Python Modules to Support
+
+- Arista AVD
+- Netbox
+
+## Default Shell
+
+- Zsh
+
+## Prerequisites
+
+- Docker installed on local machine
+- https://docs.docker.com/get-docker/
+
+
+## Create Dockerfile.centos in local directory
+include contents below
 
 ```shell
 FROM centos
