@@ -7,8 +7,11 @@ docker build -f Dockerfile.centos --tag mycentosbox/base .
 Run Docker Image as a Container
 ================================
 
+MacOS
 docker run -it --rm -v $(PWD):/projects mycentosbox/base
 
+Windows
+docker run -it --rm -v %cd%:/projects mycentosbox/base
 
 
 Dockerfile.centos
