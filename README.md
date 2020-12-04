@@ -8,7 +8,7 @@ Create a custom Docker container built on Centos that has Python and Ansible ins
 
 - CentOS Linux release 8.2.2004 (Core)
 - Python 3.6.8
-- Ansible 2.9.6
+- Ansible 2.9.15
 
 ## Ansible Collections & Python Modules to Support
 
