@@ -33,13 +33,19 @@ Create file called Dockerfile.centos and include contents below
 git clone https://github.com/mthiel117/dockerbuild.git
 ```
 
-## STEP 2 - Build Docker Image
+## STEP 2 - Change Directory
+
+```shell
+cd dockerbuild
+```
+
+## STEP 3 - Build Docker Image
 
 ```shell
 docker build -f Dockerfile.centos --tag mycentosbox/base .
 ```
 
-## STEP 3 - Run container and attach to local current directory
+## STEP 4 - Run container and attach to local current directory
 
 MacOS
 
