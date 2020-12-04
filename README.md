@@ -39,7 +39,7 @@ git clone https://github.com/mthiel117/dockerbuild.git
 docker build -f Dockerfile.centos --tag mycentosbox/base .
 ```
 
-## STEP 3 - Run container and attach local volume ($PWD)
+## STEP 3 - Run container and attach to local current directory
 
 MacOS
 
