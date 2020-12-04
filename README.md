@@ -23,22 +23,23 @@ Create a custom Docker container built on Centos that has Python and Ansible ins
 
 - Docker installed on local machine
 - https://docs.docker.com/get-docker/
+- GIT installed on local machine
 
 
-## Clone the repo
+## STEP 1 - Clone the repo
 Create file called Dockerfile.centos and include contents below
 
 ```shell
 git clone https://github.com/mthiel117/dockerbuild.git
 ```
 
-## Build Docker Image
+## STEP 2 - Build Docker Image
 
 ```shell
 docker build -f Dockerfile.centos --tag mycentosbox/base .
 ```
 
-## Run container and attach local volume ($PWD)
+## STEP 3 - Run container and attach local volume ($PWD)
 
 MacOS
 
