@@ -17,6 +17,9 @@ RUN dnf install git -y
 # RUN pip3 install --user --trusted-host files.pythonhosted.org --trusted-host pypi.org --trusted-host pypi.python.org -r requirements.txt
 # RUN wget --quiet https://raw.githubusercontent.com/aristanetworks/ansible-avd/devel/development/requirements-dev.txt
 # RUN pip3 install --user --trusted-host files.pythonhosted.org --trusted-host pypi.org --trusted-host pypi.python.org -r requirements-dev.txt
+RUN wget --quiet https://raw.githubusercontent.com/mthiel117/dockerbuild/main/requirements.txt
+RUN pip3 install --user --trusted-host files.pythonhosted.org --trusted-host pypi.org --trusted-host pypi.python.org -r requirements.txt
+
 
 # Netbox collections and module
 RUN ansible-galaxy collection install netbox.netbox
