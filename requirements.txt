@@ -18,3 +18,4 @@ pre-commit==2.3.0
 docker==4.2.2
 molecule==3.0.5
 pynetbox==5.1.0
+jsonrpclib-pelix==0.4.2
