@@ -15,7 +15,9 @@ RUN dnf install git -y
 # Extra modules to support AVD and Others....
 RUN wget --quiet https://raw.githubusercontent.com/mthiel117/dockerbuild/main/requirements.txt
 # Trusted hosts needed if building image on a Windows machine to eliminate SSL Certificate Errors
+RUN pip3 install --user --upgrade pip
 RUN pip3 install --user --trusted-host files.pythonhosted.org --trusted-host pypi.org --trusted-host pypi.python.org -r requirements.txt
+
 
 # Netbox Ansible collections
 RUN ansible-galaxy collection install netbox.netbox
