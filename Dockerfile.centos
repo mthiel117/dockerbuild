@@ -19,7 +19,9 @@ RUN pip3 install --user --upgrade pip
 RUN pip3 install --user --trusted-host files.pythonhosted.org --trusted-host pypi.org --trusted-host pypi.python.org -r requirements.txt
 
 
-# Netbox Ansible collections
+# Ansible collections
+RUN ansible-galaxy collection install arista.avd
+RUN ansible-galaxy collection install arista.cvp
 RUN ansible-galaxy collection install netbox.netbox
 
 # ZSH
